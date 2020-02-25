@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFacutysTable extends Migration
+class CreateFacultysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateFacutysTable extends Migration
      */
     public function up()
     {
-        Schema::create('facutys', function (Blueprint $table) {
+        Schema::create('facultys', function (Blueprint $table) {
             $table->increments('id');
-            $table->srting('fac_id');
+            $table->string('fac_id');
             $table->string('fac_name');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateFacutysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('facutys');
+        Schema::dropIfExists('facultys');
     }
 }
